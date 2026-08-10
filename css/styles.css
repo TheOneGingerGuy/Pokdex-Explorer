@@ -1,0 +1,6 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    text-align: center;
+}
