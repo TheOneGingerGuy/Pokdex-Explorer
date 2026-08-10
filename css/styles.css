@@ -1,6 +1,15 @@
+
+@font-face {
+    font-family:pokefont ;
+    src: url(./PokemonGb-RAeo.ttf);
+}
 .card{
     display: flex;
     flex-direction: column;
     background-color: cornflowerblue;
     text-align: center;
+    font-family: pokefont;
+    font-size: small;
+    width: min-content;
+    padding: 20px;
 }
