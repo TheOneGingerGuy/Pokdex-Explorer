@@ -6,18 +6,22 @@
 .card{
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
+    background-image: radial-gradient(circle, rgb(50, 196, 236 , .5), rgb(28, 171, 197, .5));
     text-align: center;
     font-family: pokefont;
     font-size: small;
-    width: 100px;
+    width: 75px;
+    height: 75px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 10px;
-    border: 2px cornflowerblue solid;
+    border: 2px rgb(172, 234, 255) solid;
+    justify-content: center;
+    align-items: center;
 }
 
 .card img{
-    width: px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
+    margin-bottom: -10px;
 }
