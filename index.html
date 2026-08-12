@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pokedex Explorer</title>
+
     <link rel="stylesheet" href="./css/styles.css">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
-<body class="h-screen w-[100%] bg-linear-to-r from-cyan-400 via-white to-cyan-400 bg-no-repeat md:'flex' flex-wrap">
-    <div id="empty_top" class="w-screen min-h-[20%] md:'flx'"><img src="./images/mobile_pokedex_top.jpg" alt=""></div>
-        <div id="content" class="w-screen min-h-[60%] grid grid-cols-3 content-start justify-items-center gap-x-2 gap-y-2 p-4">
-        </div>
-        <div class="search-container">
-        <input type="text" id="poke-input" placeholder="Enter Pokemon name (e.g. pikachu)">
-        <button id="search-btn">Search</button>
+
+<body class="h-screen w-screen m-0 p-0 overflow-hidden bg-linear-to-r from-cyan-400 via-white to-cyan-400 flex flex-col">
+    <div id="empty_top" class="w-screen h-[20%] shrink-0 md:hidden ">
+        <img 
+            class="w-full h-full object-cover block" 
+            src="./images/mobile_pokedex_top.jpg" 
+            alt=""
+        >
     </div>
-
-    <!-- Clear container where cards will be generated -->
-            <div id="empty_bottom" class="w-screen min-h-[20%] md:'flex'"><img src="./images/mobile_pokedex_bottom.jpg" alt=""></div>
-<script src="./js/app.js"></script>    <!-- Replace the image of the pokedex with a background color thats similar and use the top pokedex and bottom part to make it alike a scroll. -->
+    <div id="content" class="w-screen h-[60%] shrink-0">
+        <div id="example" class="card">
+            <img src="./images/1.png" alt="">
+            001
+        </div>
+    </div>
+    <div id="empty_bottom" class="w-screen h-[20%] shrink-0 md:hidden">
+        <img 
+            class="w-full h-full object-cover block" 
+            src="./images/mobile_pokedex_bottom.jpg" 
+            alt=""
+        >
+    </div>
+    <script src="./js/app.js"></script>
 </body>
-
 </html>
