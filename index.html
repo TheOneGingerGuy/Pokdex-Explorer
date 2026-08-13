@@ -9,6 +9,16 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body class="h-screen w-screen m-0 p-0 overflow-hidden bg-linear-to-r from-cyan-400 via-white to-cyan-400 flex flex-col">
+
+    <!-- DESKTOP LAPTOP -->
+    <div id="laptop_screen" class="hidden md:flex absolute inset-0 items-center justify-center">
+    <img
+        src="./images/Pokedex2.png"
+        class="w-full h-full object-fill"
+        alt=""
+    >
+</div>
+    <!-- MOBILE TOP -->
     <div id="empty_top" class="w-screen h-[20%] shrink-0 md:hidden">
         <img
             class="w-full h-full object-cover block"
@@ -17,17 +27,19 @@
         >
     </div>
 
-    <div id="content" class="w-screen h-[60%] shrink-0 grid grid-cols-3 content-start justify-items-center gap-x-2 gap-y-2 p-4 overflow-y-auto">
+    <!-- CONTENT -->
+    <div
+        id="content"
+        class="w-screen h-[60%] shrink-0 grid grid-cols-3 content-start justify-items-center gap-x-2 gap-y-2 p-4 overflow-y-auto md:w-[76%] md:absolute md:bottom-0 md:h-[85%]">
+        test
     </div>
 
     <div class="search-container w-screen shrink-0 flex items-center justify-center gap-2 p-2">
         <input type="text" id="poke-input" placeholder="Enter Pokemon name (e.g. pikachu)">
         <button id="search-btn">Search</button>
-        <input type="checkbox" id="shiny-checkbox">
-        <label for="shiny-checkbox">Shiny</label>
-        
     </div>
 
+    <!-- MOBILE BOTTOM -->
     <div id="empty_bottom" class="w-screen h-[20%] shrink-0 md:hidden">
         <img
             class="w-full h-full object-cover block"
