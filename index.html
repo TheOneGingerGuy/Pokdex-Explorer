@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex Explorer</title>
+    <title>Pokédex Explorer</title>
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -13,7 +13,7 @@
     <!-- DESKTOP LAPTOP -->
     <div id="laptop_screen" class="hidden md:flex absolute inset-0 items-center justify-center">
     <img
-        src="./images/Pokedex2.png"
+        src="./images/Pokedex2_upscaled_6x (1).png"
         class="w-full h-full object-fill"
         alt=""
     >
@@ -33,7 +33,29 @@
         class="w-screen h-[60%] shrink-0 grid grid-cols-3 md:grid-cols-6 content-start justify-items-center gap-x-2 gap-y-2 p-4 overflow-y-auto md:w-[76%] md:absolute md:bottom-0 md:h-[85%]">
         test
     </div>
-
+    <div id="poke-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+    <div class="bg-white border-2 border-black rounded-2xl p-6 max-w-sm w-full relative font-[pokefont]">
+        <button id="modal-close" class="absolute top-2 right-3 text-xl leading-none cursor-pointer">&times;</button>
+        <div id="modal-loading" class="hidden text-center py-8">Loading...</div>
+        <div id="modal-body" class="hidden text-center">
+            <p id="modal-number" class="text-gray-500 text-sm"></p>
+            <img id="modal-sprite" class="w-32 h-32 mx-auto" alt="">
+            <h2 id="modal-name" class="text-lg capitalize font-bold mb-2"></h2>
+            <div id="modal-types" class="flex justify-center gap-2 mb-3"></div>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-left text-sm mb-3">
+                <p>Height: <span id="modal-height"></span></p>
+                <p>Weight: <span id="modal-weight"></span></p>
+            </div>
+            <div class="text-left text-sm">
+                <p class="font-bold mb-1">Abilities:</p>
+                <ul id="modal-abilities" class="list-disc list-inside"></ul>
+            </div>
+            <div class="text-left text-sm mt-3">
+                <p class="font-bold mb-1">Base Stats:</p>
+                <ul id="modal-stats" class="space-y-1"></ul>
+            </div>
+        </div>
+    </div>
 <div 
     class="search-container
            w-full
