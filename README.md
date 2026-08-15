@@ -9,3 +9,4 @@ Switch to shiny button if the pokemon caught is shiny and favorite button for yo
 I learned how to fetch api's and get the information I needed from the output of the API and how to input it into my code I also got more familiar with JQuery functions and how tailwind works and how to implement it into code even though I still am not very profcient at it
 We plan to improve the way the website looks as it looks very rudimentary at the current moment we also plan to make the search function more seamless. 
 ![alt text](image.png)
+https://theonegingerguy.github.io/Pokdex-Explorer/
