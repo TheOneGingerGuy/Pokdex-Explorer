@@ -3,6 +3,17 @@
     font-family:pokefont ;
     src: url(./PokemonGb-RAeo.ttf);
 }
+@keyframes cardFlipAnim {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
 .card{
     display: flex;
     flex-direction: column;
@@ -18,10 +29,134 @@
     border: 2px rgb(172, 234, 255) solid;
     justify-content: center;
     align-items: center;
+    position: relative;
+    transition: all 0.7s ease-out;
+    cursor: pointer;
+    perspective: 600px;
 }
 
 .card img{
     width: 65px;
     height: 65px;
     margin-bottom: -10px;
+}
+.card-flip{
+    animation: cardFlipAnim 0.5s ease-in-out;
+}
+
+.shiny-toggle {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    padding: 0;
+}
+
+.shiny-toggle:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.flash-added {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px 4px rgba(74, 222, 128, 0.5);
+    outline: 4px solid rgb(74, 222, 128);
+}
+
+.flash-updated {
+    box-shadow: 0 0 12px 4px rgba(96, 165, 250, 0.5);
+    outline: 4px solid rgb(96, 165, 250);
+}
+
+.empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #6b7280;
+}
+
+.type-badge {
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-size: 12px;
+    text-transform: capitalize;
+    background-color: #a5f3fc;
+    border: 1px solid #22d3ee;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.stat-label {
+    width: 80px;
+    text-transform: capitalize;
+    flex-shrink: 0;
+}
+
+.stat-value {
+    width: 32px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.stat-bar-track {
+    flex: 1;
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stat-bar-fill {
+    display: block;
+    height: 100%;
+    background-color: #22d3ee;
+}
+.loading-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #6b7280;
+    padding: 20px;
+}
+.heart-toggle {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    padding: 0;
+}
+
+.heart-toggle.is-favorite {
+    color: red;
+}
+
+.favorite-filter-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+#scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 40;
 }

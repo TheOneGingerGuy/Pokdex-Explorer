@@ -44,18 +44,38 @@
            md:left-1/2
            md:-translate-x-1/2
            md:w-[30%]">
-
+    <select id="type-filter" class="bg-white border-2 border-black rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 capitalize">
+        <option value="all">All Types</option>
+        <option value="normal">Normal</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="electric">Electric</option>
+        <option value="grass">Grass</option>
+        <option value="ice">Ice</option>
+        <option value="fighting">Fighting</option>
+        <option value="poison">Poison</option>
+        <option value="ground">Ground</option>
+        <option value="flying">Flying</option>
+        <option value="psychic">Psychic</option>
+        <option value="bug">Bug</option>
+        <option value="rock">Rock</option>
+        <option value="ghost">Ghost</option>
+        <option value="dragon">Dragon</option>
+        <option value="dark">Dark</option>
+        <option value="steel">Steel</option>
+        <option value="fairy">Fairy</option>
+    </select>
+    <label class="favorite-filter-label">
+    <input type="checkbox" id="favorite-filter" class="color-white">
+    Favorites Only
+    </label>
     <input 
         type="text" 
         id="poke-input" 
         placeholder="Enter Pokemon name"
         class="w-full bg-white border-2 border-black rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
-
     <button id="search-btn" class="w-48px bg-white border-2 border-black rounded-md p-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">Search</button>
-
-    <input type="checkbox" id="shiny-checkbox">
-    <label for="shiny-checkbox">Shiny</label>
 </div>
 
     <!-- MOBILE BOTTOM -->
@@ -92,7 +112,7 @@
             </div>
         </div>
     </div>
-
+    <button id="scroll-top-btn" class="hidden">↑ Top</button>
     <script src="./js/app.js"></script>
 </body>
 </html>
